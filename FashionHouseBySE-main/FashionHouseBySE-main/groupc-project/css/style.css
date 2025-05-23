@@ -1,0 +1,605 @@
+@font-face {
+    font-family: "Satoshi";
+    src: url("../font/satoshi/Satoshi-Regular.eot");
+    src: url("../font/satoshi/Satoshi-Regular.eot?#iefix")
+            format("embedded-opentype"),
+        url("../font/satoshi/Satoshi-Regular.woff2") format("woff2"),
+        url("../font/satoshi/Satoshi-Regular.woff") format("woff"),
+        url("../font/satoshi/Satoshi-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --black: rgb(0, 36, 0);
+    --white: #ffffff;
+    --font-satoshi: "Satoshi";
+    --foreground-rgb: rgba(255, 255, 255, 1);
+    --background-rgb: rgba(0, 0, 0, 1);
+    --soft-black: #111111;
+    --soft-yellow: #bbcf8d;
+    --accent-color: #a7ff83;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent !important;
+    -moz-tap-highlight-color: transparent !important;
+    -o-tap-highlight-color: transparent !important;
+}
+
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    color: var(--black);
+    background: var(--white);
+    font-family: var(--font-satoshi);
+}
+
+a {
+    text-decoration: none;
+}
+img {
+    object-position: center;
+    object-fit: cover;
+}
+
+/* App Style */
+.App {
+    min-height: 100vh;
+}
+/* End of App Style */
+
+/* Grid Style */
+.row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.colLarge4 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 33.3333333333%;
+    -ms-flex: 0 0 33.3333333333%;
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+}
+.colLarge2 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 20%;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+/* End of Grid Style */
+
+/* Navbar Style */
+.customNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+}
+.customNav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0px;
+    gap: 25px;
+}
+.customNav ul li {
+    font-size: 0.9rem;
+    font-family: var(--font-satoshi);
+}
+.customNav ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 15px;
+    font-weight: 400 !important;
+    color: var(--black);
+    font-family: var(--font-satoshi);
+}
+.customNav ul.second li a {
+    font-size: 1.2rem;
+    font-weight: 800 !important;
+    letter-spacing: -0.5px;
+}
+/* End of Navbar Style */
+
+/* Header Section Style */
+.headerSection {
+    border: none;
+    padding: 20px 0px;
+}
+.headerSection h1 {
+    font-size: 15rem;
+    text-align: center;
+    letter-spacing: -14.5px;
+    font-weight: 600 !important;
+    font-family: var(--font-satoshi);
+    line-height: 250px;
+    color: var(--black);
+}
+.headerSection h1.small {
+    font-size: 9rem;
+    letter-spacing: -10px;
+    line-height: 200px;
+}
+.headerSection h1.medium {
+    font-size: 12rem;
+    letter-spacing: -12px;
+}
+.headerSection p {
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 400 !important;
+    font-family: var(--font-satoshi);
+    color: var(--black);
+    padding: 10px 440px;
+    letter-spacing: -0.3px;
+}
+.headerSection p.small {
+    font-size: 1rem;
+}
+.headerSection .imageContainer {
+    padding: 25px;
+}
+.headerSection .imageContainer img {
+    width: 100%;
+    height: 750px;
+    object-position: top;
+}
+/* End of Header Section Style */
+
+/* Welcome Section Style */
+.welcomeSection {
+    padding: 30px 20px;
+}
+.welcomeSection h2 {
+    font-size: 3.5rem;
+    color: var(--black);
+    font-family: var(--font-satoshi);
+    font-weight: 700 !important;
+    text-align: center;
+    padding: 10px 150px;
+}
+.welcomeSection .imageContainer {
+    padding: 50px 80px;
+}
+.welcomeSection .imageContainer img {
+    width: 100%;
+    height: 600px;
+    object-position: top;
+}
+/* End of Welcome Section */
+
+/* Collection Section Style */
+.collectionSection {
+    padding: 50px;
+}
+.collectionSection .header h2 {
+    font-size: 3.5rem;
+    color: var(--black);
+    font-family: var(--font-satoshi);
+    font-weight: 700 !important;
+}
+.collectionSection .content {
+    padding: 50px 0px;
+}
+/* End of Collection Section */
+
+/* Single Product Card */
+.singleProductCard {
+    border: none;
+    display: block;
+    margin: 20px 0px;
+}
+.singleProductCard:hover .image img {
+    transform: scale(1.4);
+}
+.singleProductCard .image {
+    border: none;
+    height: 500px;
+    overflow: hidden !important;
+}
+.singleProductCard .image img {
+    width: 100%;
+    height: 100%;
+    object-position: top center;
+    transition: 0.4s all ease-in-out;
+    cursor: pointer;
+}
+.singleProductCard .productDetails {
+    padding: 10px 0px;
+}
+.singleProductCard .productDetails h4 {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    color: var(--black);
+    font-family: var(--font-satoshi);
+    font-weight: 500 !important;
+    align-items: center;
+}
+.singleProductCard .productDetails h4 i {
+    font-size: 1rem;
+    font-style: normal;
+}
+.singleProductCard .productDetails p {
+    padding: 5px 0px;
+    font-size: 1.1rem;
+    color: var(--black);
+    font-family: var(--font-satoshi);
+    opacity: 0.7;
+    letter-spacing: -0.2px;
+}
+
+/* Board of Trustees Section Styling */
+.boardSection {
+    padding: 50px;
+    padding-bottom: 100px;
+}
+.boardSection .header h2 {
+    font-size: 3.7rem;
+    color: var(--black);
+    font-family: var(--font-satoshi);
+    font-weight: 700 !important;
+    text-align: center;
+}
+.boardSection .header p {
+    font-size: 1.7rem;
+    color: var(--black);
+    font-family: var(--font-satoshi);
+    font-weight: 400 !important;
+    text-align: center;
+    letter-spacing: -0.2px;
+    padding: 10px;
+}
+.boardSection .content {
+    padding: 80px;
+}
+
+/* Single Trustee Card */
+.singleTrusteeCard {
+    border: none;
+    display: block;
+    position: relative;
+    margin: 30px 10px;
+    cursor: pointer;
+}
+.singleTrusteeCard:hover .image img {
+    transform: scale(1.4);
+}
+.singleTrusteeCard:hover .trusteeDetails {
+    display: block;
+}
+.singleTrusteeCard .image {
+    border: none;
+    height: 180px;
+    overflow: hidden !important;
+    border-radius: 100px;
+}
+.singleTrusteeCard .image img {
+    width: 100%;
+    height: 100%;
+    object-position: center center;
+    object-fit: contain;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: 0.4s all ease-in-out;
+    cursor: pointer;
+}
+.singleTrusteeCard .trusteeDetails {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    transition: 0.4s all ease-in-out;
+}
+.singleTrusteeCard .trusteeDetails h4 {
+    font-size: 1rem;
+    letter-spacing: -0.3px;
+    color: var(--white);
+    font-family: var(--font-satoshi);
+    font-weight: 500 !important;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+}
+/* End of Board of Trustees Section Styling */
+
+/* Marquee Section Styling */
+.marqueeSection {
+    background-color: var(--black);
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.marqueeSection h3 {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 65s linear infinite;
+    font-size: 8rem;
+    font-family: var(--font-satoshi);
+    font-weight: 600 !important;
+    letter-spacing: -4px;
+}
+.marqueeSection h3 i {
+    font-style: normal;
+    color: var(--accent-color);
+}
+/* End of Marquee Section Styling */
+
+/*  */
+.appointmentSection {
+    padding: 100px;
+}
+.appointmentSection .header h2 {
+    font-size: 3.7rem;
+    color: var(--black);
+    font-family: var(--font-satoshi);
+    font-weight: bold !important;
+    text-align: center;
+    letter-spacing: -2px;
+}
+.appointmentSection .header p {
+    font-size: 1.4rem;
+    color: var(--black);
+    font-family: var(--font-satoshi);
+    font-weight: 400 !important;
+    text-align: center;
+    letter-spacing: -0.2px;
+    padding: 10px;
+}
+.appointmentSection .content {
+    padding: 50px 200px;
+}
+.appointmentSection .content form label {
+    display: flex;
+    padding: 5px 1px;
+    font-size: 1.2rem;
+    color: var(--black);
+    font-family: var(--font-satoshi);
+    font-weight: 400 !important;
+    letter-spacing: -0.2px;
+}
+.appointmentSection .content form .inputDiv {
+    padding: 15px 0px;
+}
+.appointmentSection .content form .customInput {
+    height: 60px;
+    display: block;
+    width: 100%;
+    padding: 5px 15px;
+    resize: none;
+    font-size: 1.1rem;
+    color: var(--black);
+    font-family: var(--font-satoshi);
+    font-weight: 400 !important;
+    letter-spacing: -0.2px;
+    border: 1.3px solid rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+    outline: none;
+    transition: 0.3s all ease-in-out;
+}
+.appointmentSection .content form .customInput:focus {
+    border: 1.3px solid var(--black);
+}
+.appointmentSection .content form textarea.customInput {
+    height: 200px;
+    padding: 15px;
+}
+.appointmentSection .content form .buttonDiv {
+    padding: 40px 0px;
+}
+.appointmentSection .content form .buttonDiv button {
+    width: 100%;
+    height: 60px;
+    font-size: 1.1rem;
+    color: var(--white);
+    font-family: var(--font-satoshi);
+    font-weight: 400 !important;
+    letter-spacing: -0.2px;
+    border: none;
+    background-color: var(--black);
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+}
+/*  */
+
+/* Upcoming Event Section Style */
+.upcomingEventsSection {
+    padding: 100px;
+}
+.upcomingEventsSection .header h2 {
+    font-size: 3rem;
+    color: var(--black);
+    font-family: var(--font-satoshi);
+    font-weight: bold !important;
+    letter-spacing: -1.5px;
+}
+.upcomingEventsSection .content {
+    padding: 50px 0px;
+}
+/* End of Upcoming Event Section */
+
+/* Single Event Card */
+.singleEventCard {
+    border: none;
+    display: block;
+    margin: 30px 0px;
+    position: relative;
+}
+.singleEventCard:hover .image img {
+    transform: scale(1.4);
+}
+.singleEventCard:hover .eventDetails {
+    display: flex;
+}
+.singleEventCard .image {
+    border: none;
+    height: 430px;
+    overflow: hidden !important;
+}
+.singleEventCard .image img {
+    width: 100%;
+    height: 100%;
+    object-position: top center;
+    transition: 0.4s all ease-in-out;
+    cursor: pointer;
+}
+.singleEventCard .eventDetails {
+    display: none;
+    padding: 20px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    align-items: flex-end;
+    background-color: rgba(0, 36, 0, 0.4);
+    transition: 0.4s all ease-in-out;
+}
+.singleEventCard .eventDetails h4 {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    color: var(--black);
+    font-family: var(--font-satoshi);
+    font-weight: 500 !important;
+    align-items: center;
+    color: var(--white);
+}
+.singleEventCard .eventDetails h4 i {
+    font-size: 1rem;
+    font-style: normal;
+}
+/*  */
+
+/* Custom Footer Styling */
+.customFooter {
+    border: none;
+}
+.customFooter .first {
+    padding: 70px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.customFooter .first .contentDiv {
+    width: 450px;
+}
+.customFooter .first .contentDiv h3 {
+    font-size: 1.5rem;
+    font-weight: 600 !important;
+    letter-spacing: -0.5px;
+    font-family: var(--font-satoshi);
+}
+.customFooter .first .contentDiv p {
+    padding: 10px 0px;
+    line-height: 28px;
+    font-family: var(--font-satoshi);
+    font-weight: 400 !important;
+    opacity: 0.7;
+}
+.customFooter .first .formDiv {
+    border: none;
+}
+.customFooter .first .formDiv legend {
+    font-size: 1.2rem;
+    font-weight: 600 !important;
+    letter-spacing: -0.5px;
+    font-family: var(--font-satoshi);
+    padding: 20px 15px;
+}
+.customFooter .first .formDiv .inputDiv {
+    width: 420px;
+    height: 70px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 40px;
+    background-color: #edffe7;
+}
+.customFooter .first .formDiv .inputDiv input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    padding: 5px 25px;
+    font-family: var(--font-satoshi);
+    font-weight: 400 !important;
+    font-size: 1rem;
+    letter-spacing: -0.2px;
+    color: var(--black);
+}
+.customFooter .first .formDiv .inputDiv button {
+    width: 200px;
+    height: 100%;
+    border-radius: 60px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: var(--white);
+    font-family: var(--font-satoshi);
+    font-weight: 400 !important;
+    font-size: 0.95rem;
+    letter-spacing: -0.2px;
+    cursor: pointer;
+}
+
+.customFooter .second {
+    background-color: #a7ff8333;
+    padding: 15px;
+}
+.customFooter .second p {
+    text-align: center;
+    opacity: 1;
+    font-size: 0.9rem;
+    font-family: var(--font-satoshi);
+    font-weight: 400 !important;
+    letter-spacing: -0.2px;
+}
+/* End of Custom Footer Styling */
+
+/* Animations */
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+/* End of Animation */
